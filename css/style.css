@@ -1,0 +1,217 @@
+/* Шапка страницы  на всю высоту и картинкой */
+header {
+    background: url(../img/bg1.png) no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    max-height: 100vh;
+    height: 100vh;
+}
+/* позиционирование в логотипе -14% */
+.decline {
+    font-size: 10px;
+    text-align: center;
+    color: red;
+    border-radius: 15px;
+    background-color: white;
+}
+/* Отключение бургера на компьютерной версии */
+.burger {
+    display: none;
+}
+/* Компьютерная версия бургера  */
+.burger-no {
+    display: flex;
+    align-items: center;
+}
+/* собственная таблица отключена   */
+.my_table{
+    display: none;
+}
+/* при навидении на кнопки появляется белая оконтовка на 3 пикселя */
+.hover:hover {
+    border: 1px solid white;
+    border-radius: 20px;
+}
+/* Первый элемент  */
+#First-section {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-height: 70vh;
+    height: 100vh;
+}
+/* Высота кнопок */
+.width {
+    padding: 15px 40px;
+    font-size: 24px;
+    border-radius: 40px;
+}
+/* Градиент тела */
+.gradient-body {
+    background: linear-gradient(to bottom, #38445e, #49617c, #434e6c,#373f55);
+}
+/*  у всех сексии если нижняя оконтовка  */
+#Second-section,
+#Fourth-section,
+#Fifth-section,
+#Sixth-section,
+#Seventh-section,
+#Ninth-section {
+    border-bottom: 1px solid gray;
+}
+/* все заголовки написаны большими буквами */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+}
+/* вставки градиента на сайте */
+.gradient {
+    height: 6px;
+    background: linear-gradient(to right, rgba(87, 245, 73, 1), rgba(71, 144, 255, 1));
+}
+/* все кнопки которые имеют зеленый фон без навидения применяются такие стили */
+.btn-outline-success {
+    border-radius: 25px;
+    padding: 15px;
+    font-size: 20px;
+}
+/*  изображение в третий сексии 100 пикселей  */
+.expansion {
+    width: 100px;
+}
+/* таблица которая показывается пк версии */
+#table,
+#table tr td {
+    border: 1px solid rgba(128, 128, 128, 0.507);
+}
+/* отступы  */
+#table tr td {
+    padding: 20px;
+}
+/* для всех пунктах в новостях применяются такие стили  */
+.alignment {
+    font-size: 14px;
+    margin: 5px;
+}
+/* позиционирование  по центру */
+#Seventh-section #news {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+
+}
+/* форма */
+.form {
+    background-image: url(../img/bg2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 75vh;
+    height: 100vh;
+    padding: 0;
+}
+/* верхняя оконтовка формы */
+.header-contain {
+    height: 10px;
+    padding: 0;
+    background-image: url(../img/ribbon.png);
+    background-repeat: repeat-x;
+    background-size: auto;
+}
+/* комментарии на форма  */
+textarea {
+    resize: none;
+}
+/* расположение формы на сайте */
+.position-absolute {
+    top: 25%;
+    left: 25%;
+}
+/* Сексия которая флексовая и позиционирование по центру  */
+#Ninth-section {
+    background-color: #141f2f;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+/* цвет футера  */
+footer {
+    background-color: #141f2f;
+}
+
+button[type="submit"] {
+    border: 1px solid black;
+}
+/* адаптация  */
+ /* при размере 992 пикселя*/
+@media (min-width: 992px) {
+   /* новости становиться на всю ширину экрана */
+    #news {
+        width: 100%;
+    }
+}
+/* при размере 767.98 пикселя применяется такие стили */
+@media (max-width: 767.98px) {
+    
+    /*картинки уменшились на 500 пикслей */
+    img[alt="laptop with graph"],
+    img[alt="image interest"],
+    img[alt="image schedule"] {
+        max-width: 500px;
+        width: 100%;
+    }
+}
+/* при размере 576.98 пикселя применяется такие стили */
+@media (max-width: 576.98px) {
+    
+    /* шрифт на всем сайте 12 пикселей*/
+    :root {
+        font-size: 12px;
+    }
+    /* становиться невидимым навигация ПК версии */
+    #standart .burger-no {
+        display: none;
+    }
+    /* становиться видимым навигация телефонна версии */
+    .burger {
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    /* шрифт таблицы 10 пикселей */
+    #table {
+        font-size: 10px;
+        padding: 0px;
+    }
+}
+/* при размере 425.98 пикселя применяется такие стили */
+@media (max-width:425.98px) {
+    
+    /* таблица отлючается  */
+    table{
+        display: none;
+    }
+    /* включается кастомная таблица */
+    .my_table {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+/* при размере 425.98 пикселя применяется такие стили */
+@media (max-width:403.98px){
+    /* кастомная таблица становится блочной  */
+    .my_table{
+        display: block;
+        border: 1px solid rgba(128, 128, 128, 0.507);
+    }
+     /* оконтавка к ней */
+    .my_table p:nth-child(3) , .my_table p:nth-child(6) , .my_table p:nth-child(9) , .my_table p:nth-child(12){
+        border-bottom: 1px solid rgba(128, 128, 128, 0.507);
+    }
+}
