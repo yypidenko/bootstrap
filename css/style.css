@@ -2,36 +2,42 @@
 header {
     background: url(../img/bg1.png) no-repeat;
     background-size: cover;
-    background-attachment: scroll;
     max-height: 100vh;
     height: 100vh;
 }
+
 /* позиционирование в логотипе -14% */
 .decline {
+    margin: 16px 0px 0px 0px;
+    padding: 4px 10px ;
     font-size: 10px;
     text-align: center;
     color: red;
     border-radius: 15px;
     background-color: white;
 }
+.width{
+    max-width: 65%;
+    width: 100%;
+}
 /* Отключение бургера на компьютерной версии */
 .burger {
     display: none;
 }
+
 /* Компьютерная версия бургера  */
 .burger-no {
     display: flex;
     align-items: center;
 }
-/* собственная таблица отключена   */
-.my_table{
-    display: none;
-}
+
+
 /* при навидении на кнопки появляется белая оконтовка на 3 пикселя */
 .hover:hover {
     border: 1px solid white;
     border-radius: 20px;
 }
+
 /* Первый элемент  */
 #First-section {
     display: flex;
@@ -41,16 +47,12 @@ header {
     max-height: 70vh;
     height: 100vh;
 }
-/* Высота кнопок */
-.width {
-    padding: 15px 40px;
-    font-size: 24px;
-    border-radius: 40px;
-}
+
 /* Градиент тела */
 .gradient-body {
-    background: linear-gradient(to bottom, #38445e, #49617c, #434e6c,#373f55);
+    background: linear-gradient(to bottom, #38445e, #49617c, #434e6c, #373f55);
 }
+
 /*  у всех сексии если нижняя оконтовка  */
 #Second-section,
 #Fourth-section,
@@ -60,6 +62,7 @@ header {
 #Ninth-section {
     border-bottom: 1px solid gray;
 }
+
 /* все заголовки написаны большими буквами */
 h1,
 h2,
@@ -69,42 +72,73 @@ h5,
 h6 {
     text-transform: uppercase;
 }
+
 /* вставки градиента на сайте */
 .gradient {
     height: 6px;
     background: linear-gradient(to right, rgba(87, 245, 73, 1), rgba(71, 144, 255, 1));
+}
+.btn-success{
+    background-color: lightgreen;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 15px 60px;
+    font-size: 24px;
+    border-radius: 40px;
+}
+table, td{
+    border: 1px solid rgba(128, 128, 128, 0.507);
+    table-layout: fixed;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.btn-success:hover{
+    background-color:rgba(144, 238, 144, 0.9);
+}
+.container h1.fs-1{
+    font-size: calc(2rem + 1.5vw)!important;
+}
+.container .container h3.fs-5{
+    font-size: calc(0.5rem + 0.5vw)!important;
 }
 /* все кнопки которые имеют зеленый фон без навидения применяются такие стили */
 .btn-outline-success {
     border-radius: 25px;
     padding: 15px;
     font-size: 20px;
+    border:1px solid lightgreen;
+    color: lightgreen;
+}
+.btn-outline-success:hover{
+    border:1px solid lightgreen;
+    background-color:lightgreen;
+    color: white;
+}
+.text-success{
+    color:lightgreen!important;
 }
 /*  изображение в третий сексии 100 пикселей  */
 .expansion {
     width: 100px;
 }
-/* таблица которая показывается пк версии */
-#table,
-#table tr td {
-    border: 1px solid rgba(128, 128, 128, 0.507);
-}
-/* отступы  */
-#table tr td {
-    padding: 20px;
-}
+
+
+
 /* для всех пунктах в новостях применяются такие стили  */
 .alignment {
     font-size: 14px;
     margin: 5px;
 }
+
 /* позиционирование  по центру */
 #Seventh-section #news {
     display: flex;
     flex-direction: column;
-    align-items:center;
-
 }
+
 /* форма */
 .form {
     background-image: url(../img/bg2.png);
@@ -114,6 +148,7 @@ h6 {
     height: 100vh;
     padding: 0;
 }
+
 /* верхняя оконтовка формы */
 .header-contain {
     height: 10px;
@@ -122,22 +157,37 @@ h6 {
     background-repeat: repeat-x;
     background-size: auto;
 }
+
 /* комментарии на форма  */
 textarea {
     resize: none;
 }
+
 /* расположение формы на сайте */
 .position-absolute {
-    top: 25%;
+    top: 0%;
     left: 25%;
+    margin: 10px 0px;
 }
+#news p{
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+#news p:nth-child(3),#news p:nth-child(5),#news p:nth-child(7),#news p:nth-child(9){
+    padding: 0px 0px 10px 0px;
+    color: gray;
+}
+
 /* Сексия которая флексовая и позиционирование по центру  */
 #Ninth-section {
+    padding: 150px 0px 0px 0px;
     background-color: #141f2f;
     display: flex;
     align-items: center;
     text-align: center;
 }
+
 /* цвет футера  */
 footer {
     background-color: #141f2f;
@@ -146,17 +196,12 @@ footer {
 button[type="submit"] {
     border: 1px solid black;
 }
+
 /* адаптация  */
- /* при размере 992 пикселя*/
-@media (min-width: 992px) {
-   /* новости становиться на всю ширину экрана */
-    #news {
-        width: 100%;
-    }
-}
+
 /* при размере 767.98 пикселя применяется такие стили */
 @media (max-width: 767.98px) {
-    
+
     /*картинки уменшились на 500 пикслей */
     img[alt="laptop with graph"],
     img[alt="image interest"],
@@ -165,17 +210,20 @@ button[type="submit"] {
         width: 100%;
     }
 }
+
 /* при размере 576.98 пикселя применяется такие стили */
 @media (max-width: 576.98px) {
-    
+
     /* шрифт на всем сайте 12 пикселей*/
     :root {
         font-size: 12px;
     }
+
     /* становиться невидимым навигация ПК версии */
     #standart .burger-no {
         display: none;
     }
+
     /* становиться видимым навигация телефонна версии */
     .burger {
         max-width: 100%;
@@ -184,34 +232,5 @@ button[type="submit"] {
         justify-content: space-evenly;
         align-items: center;
     }
-    /* шрифт таблицы 10 пикселей */
-    #table {
-        font-size: 10px;
-        padding: 0px;
-    }
-}
-/* при размере 425.98 пикселя применяется такие стили */
-@media (max-width:425.98px) {
-    
-    /* таблица отлючается  */
-    table{
-        display: none;
-    }
-    /* включается кастомная таблица */
-    .my_table {
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-    }
-}
-/* при размере 425.98 пикселя применяется такие стили */
-@media (max-width:403.98px){
-    /* кастомная таблица становится блочной  */
-    .my_table{
-        display: block;
-        border: 1px solid rgba(128, 128, 128, 0.507);
-    }
-     /* оконтавка к ней */
-    .my_table p:nth-child(3) , .my_table p:nth-child(6) , .my_table p:nth-child(9) , .my_table p:nth-child(12){
-        border-bottom: 1px solid rgba(128, 128, 128, 0.507);
-    }
+
 }
