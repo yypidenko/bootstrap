@@ -32,13 +32,14 @@ header {
 }
 
 .hover:nth-child(3){
-    border:1px solid white;
+    box-shadow: 0 0 0 3px white;
     border-radius: 20px;
 }
+
 /* при навидении на кнопки появляется белая оконтовка на 3 пикселя */
 
 .hover:hover:nth-child(1), .hover:hover:nth-child(2),.hover:hover:nth-child(4){
-    border: 1px solid white;
+    box-shadow: 0 0 0 3px white;
     border-radius: 20px;
 }
 
