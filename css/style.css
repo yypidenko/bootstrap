@@ -104,8 +104,12 @@ table, td{
     overflow: hidden;
 }
 td{
-    padding: 20px 0px;
+    padding: 20px 14px;
 }
+.colspan{
+    width: 45%;
+}
+
 .btn-success:hover{
     background-color:rgba(144, 238, 144, 0.9);
 }
